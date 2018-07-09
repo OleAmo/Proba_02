@@ -24,7 +24,8 @@ $usuarios = array(
 	array('nombre' => 'Robert','edad' => 31 ,'telefono' => 655412712,'pais'=>'Papue Nueva Guinea'),
 	array('nombre' => 'Maite','edad' => 11 ,'telefono' => 668415512,'pais'=>'Fidji'),
  	array('nombre' => 'Luis','edad' => 5 ,'telefono' => 668412711,'pais'=>'Congo Belga'),
-	array('nombre' => 'Berta','edad' => 33 ,'telefono' => 655412712,'pais'=>'Libia')
+	array('nombre' => 'Berta','edad' => 33 ,'telefono' => 655412712,'pais'=>'Libia'),
+	array('nombre' => 'Rosa','edad' => 33 ,'telefono' => 655412712,'pais'=>'Somalia')
 );
 
 $vocales = array('a','e','i','o','u','A','E','I','O','U');
