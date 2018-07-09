@@ -25,7 +25,9 @@ $usuarios = array(
 	array('nombre' => 'Maite','edad' => 11 ,'telefono' => 668415512,'pais'=>'Fidji'),
  	array('nombre' => 'Luis','edad' => 5 ,'telefono' => 668412711,'pais'=>'Congo Belga'),
 	array('nombre' => 'Berta','edad' => 33 ,'telefono' => 655412712,'pais'=>'Libia'),
-	array('nombre' => 'Rosa','edad' => 33 ,'telefono' => 655412712,'pais'=>'Somalia')
+	array('nombre' => 'Rosa','edad' => 33 ,'telefono' => 655412712,'pais'=>'Somalia'),
+	array('nombre' => 'Oriol','edad' => 50 ,'telefono' => 655412712,'pais'=>'Terrassa')
+
 );
 
 $vocales = array('a','e','i','o','u','A','E','I','O','U');
@@ -51,7 +53,7 @@ $vocales = array('a','e','i','o','u','A','E','I','O','U');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 
-    <style> 
+    <style>
     	h1 {font:oblique bold 100% cursive; color:#0BCC10}
      	h2 {font-family: sans-serif; font-size: 20px; color:#0F7EF5 }
      	.li {font-family: sans-serif; font-weight: bold ; color:#05123D}
@@ -76,13 +78,13 @@ $vocales = array('a','e','i','o','u','A','E','I','O','U');
 
 <div class="col-xs-6">
   	<h2>Quantas vocales tiene cada pais?</h2>
-  		
+
   		<table class="table table-hover">
 		  <tr>
 		    <th>Pais</th>
 		    <th>Número de Vocales</th>
 		  </tr>
-		  		 
+
 			<?php
 
 			foreach ($usuarios as $usuario) {
@@ -94,9 +96,9 @@ $vocales = array('a','e','i','o','u','A','E','I','O','U');
 
 				$letras = str_split($usuario['pais']);
 
-				$n = 0;              // --- contador para el nº vocales               
+				$n = 0;              // --- contador para el nº vocales
 				$vocal_string ='';   // --- string vacio que llenaremos solo de vocales de cada pais
-				
+
 
 				echo '<td>';
 				foreach ($letras as $letra) {
@@ -105,16 +107,16 @@ $vocales = array('a','e','i','o','u','A','E','I','O','U');
 					// -- Cada PAIS es un ARRAY de sus letras
 					// -- Analizamos cada letra del PAIS
 					// -- Si es VOCAL:
-					//                --> sumamos +1 al contador ($n) 
+					//                --> sumamos +1 al contador ($n)
 					//                --> añadimos la vocal a una variable ($vocal_string, para mostralas todas juntas al final)
-					
+
 					if( in_array($letra,$vocales) ){
 						$n += 1;
 						$vocal_string .= $letra.' / ';
 					}
 				}
 				echo '<td> tiene '.$n.' vocales, '.'[ '.$vocal_string.' ]</br></td>';
-				echo '</tr>'; 
+				echo '</tr>';
 			}
 			?>
 		</tr>
@@ -122,13 +124,10 @@ $vocales = array('a','e','i','o','u','A','E','I','O','U');
  </div>
 
 
- 
+
 
 
 
 
  </body>
 </html>
-
-
- 
